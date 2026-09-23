@@ -1,0 +1,17 @@
+[package]
+name = "csv2parquet"
+version = "0.1.0"
+edition = "2021"
+description = "A fast, standalone CLI to convert CSV files to Parquet"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/csv2parquet"
+readme = "README.md"
+keywords = ["csv", "parquet", "cli", "conversion"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+arrow = { version = "53", features = ["csv"] }
+parquet = { version = "53", features = ["arrow"] }
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
